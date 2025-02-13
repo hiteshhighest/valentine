@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Day</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="Images/heart.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Modern+Antiqua&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <video autoplay muted loop>
+        <source src="Videos/Background.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <div class="container">
+        <div class="title">
+            <p class="topic">Happy Valentine's Day</p>
+        </div>
+        
+        <div class="images">
+            <h2>Photo Gallery</h2>
+
+            <div class="picture1">
+                <img src="Images/Image-1.png" alt="Failed to load" class="picture">
+            </div>
+            <div class="picture2">
+                <img src="Images/Image-2.png" alt="Failed to load" class="picture">
+            </div>
+            <div class="picture3">
+                <img src="Images/Image-3.png" alt="Failed to load" class="picture">
+            </div>
+            <div class="picture4">
+                <img src="Images/Image-4.png" alt="Failed to load" class="picture">
+            </div>
+            <div class="picture5">
+                <img src="Images/Image-5.png" alt="Failed to load" class="picture">
+            </div>
+            <div class="picture6">
+                <img src="Images/Image-6.png" alt="Failed to load" class="picture">
+            </div>
+            <div class="picture7">
+                <img src="Images/Image-7.png" alt="Failed to load" class="picture">
+            </div>
+            <div class="picture8">
+                <img src="Images/Image-8.png" alt="Failed to load" class="picture">
+            </div>
+            <div class="picture9" onclick="Secret4()">
+                <img src="Images/Image-9.png" alt="Failed to load" class="picture">
+            </div>
+            <div class="picture10">
+                <img src="Images/Image-10.png" alt="Failed to load" class="picture">
+            </div>
+            <div class="picture11">
+                <img src="Images/Image-11.png" alt="Failed to load" class="picture">
+            </div>
+            <div class="picture12">
+                <img src="Images/Image-12.png" alt="Failed to load" class="picture">
+            </div>
+            <div class="picture13">     
+                <img src="Images/Image-13.png" alt="Failed to load" class="picture"> 
+            </div>       
+            <div class="picture14">
+                <img src="Images/Image-14.png" alt="Failed to load" class="picture">
+            </div>
+
+            <a href="Review.html" target="_blank" onclick="Secret5()"><h3>The End</h3></a>
+        </div>        
+    </div>      
+
+    <div class="secret">
+        Hehe, You thought that was the entire website? Find all the secrets :D <br><br>
+        <span style="color: #000;">Secrets Found: </span><span class="SecretCount" style="color: #ff00d4;"></span>
+    </div>
+
+    <div class="card">
+        <h1>Valentine's Day Card</h1> <br><br>
+        <h2>Dear Manavi,</h2>
+        <p>
+            The 
+            <a href="calender.html" onclick="Secret6()" target="_blank" style="text-decoration: none; color: #000; font-weight: bold;">Week of Feburary</a> 
+            is a really a special moment for both of us. As of today, It's been
+            <span class="DaysDifference"></span>
+            days from Feburary 14th 2025. The week of Valentine was a really fun experience which we both felt. It was a really memorable week, which we both will never forget. I promise to keep the promises I made in promsie day and will try to keep you as happy as I can.<br><br>
+            
+            Thank you baby for everything I appriciate it a lot.
+        </p>
+        <button onclick="DropImage('Images/heart.png')" class="absolute"></button>
+    </div>
+
+    <button class="letter" onclick="toggleImage()">
+        <img src="Images/Open.png" class="letter-img">
+    </button>
+
+    <a class="song" href="song.html" target="_blank" onclick="Secret3()"></a>
+
+    <script src="script.js"></script>
+</body>
+</html>

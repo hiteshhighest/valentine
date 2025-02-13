@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Calender - Feburary</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Modern Antiqua", serif;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f5f5f5;
+            overflow: hidden;
+        }
+
+        video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.85);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+            text-align: center;
+            backdrop-filter: blur(5px);
+        }
+
+        h1 {
+            font-family: "Pacifico", serif;
+            font-weight: 300;
+            color: #f8004a;
+            font-size: 36px;
+            margin-bottom: 15px;
+        }
+
+        table {
+            width: 100%;
+            margin-top: 15px;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        th {
+            font-size: 20px;
+            padding: 14px;
+        }
+
+        td {
+            transition: 0.3s;
+        }
+
+        td:hover {
+            background-color: #f800ae;
+            cursor: pointer;
+        }
+
+        .fourteen {
+            border: 2px solid #f00;
+            border-radius: 50%;
+            aspect-ratio: 1/1;
+            padding: 10px;
+        }
+
+        .sixteen {
+            border-radius: 50%;
+            aspect-ratio: 1/1;
+            padding: 10px;
+            background-color: #0f0;
+        }
+    </style>
+
+    <link rel="icon" type="image/x-icon" href="Images/heart.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Modern+Antiqua&family=Pacifico&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <video autoplay muted loop>
+        <source src="Videos/Background.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <div class="container">
+        <h1>Feburary</h1>
+        <table>
+            <tr>
+                <th>Sunday</th>
+                <th>Monday</th>
+                <th>Tuesday</th>
+                <th>Wednesday</th>
+                <th>Thursday</th>
+                <th>Friday</th>
+                <th>Saturday</th>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+                <td title="Rose Day">7</td>
+                <td title="Propose Day">8</td>
+            </tr>
+            <tr>
+                <td title="Chocolate Day">9</td>
+                <td title="Teddy Day">10</td>
+                <td title="Promise Day">11</td>
+                <td title="Hug Day">12</td>
+                <td title="Kiss Day">13</td>
+                <td title="Valentine's Day" onclick="FallingHearts()"><label class="fourteen">14</label></td>
+                <td title="Slap Day">15</td>
+            </tr>
+            <tr>
+                <td title="Kick Day"><label class="sixteen">16</label></td>
+                <td title="Perfume Day">17</td>
+                <td title="Flirting Day">18</td>
+                <td title="Confession Day">19</td>
+                <td title="Missing Day">20</td>
+                <td title="Break up Day">21</td>
+                <td title="Love is born again">22</td>
+            </tr>
+            <tr>
+                <td>23</td>
+                <td>24</td>
+                <td>25</td>
+                <td>26</td>
+                <td>27</td>
+                <td>28</td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+
+    <script>
+        function FallingHearts() {
+            const container = document.body;
+            let interval = setInterval(() => {
+                const heart = document.createElement("img");
+                heart.src = "Images/heart.png";
+                heart.style.position = "fixed";
+                heart.style.top = "-50px";
+                heart.style.left = Math.random() * window.innerWidth + "px";
+                heart.style.width = "70px";
+                heart.style.height = "70px";
+                heart.style.pointerEvents = "none";
+                heart.style.zIndex = "100000";
+                heart.style.transition = "top 2s linear"; // Reduced time for faster fall
+                
+                container.appendChild(heart);
+                
+                requestAnimationFrame(() => {
+                    heart.style.top = window.innerHeight + "px";
+                });
+                
+                setTimeout(() => {
+                    heart.remove();
+                }, 3000); // Adjusted timeout accordingly
+            }, 200);
+            
+            // Stop the animation after 20 seconds
+            setTimeout(() => {
+                clearInterval(interval);
+            }, 10000);
+        }
+    </script>
+</body>
+</html>

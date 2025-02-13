@@ -1,0 +1,269 @@
+* {
+    font-family: "Modern Antiqua", serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    margin-bottom: 100px;
+}
+
+/* Background Video */
+video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Center Content */
+.container {
+    text-align: center;
+    padding-top: 50px;
+}
+
+/* Title Styling */
+.topic {
+    font-family: "Roboto", sans-serif;
+    font-size: 60px;
+    font-weight: bold;
+    color: #ff4d6d;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 15px 30px;
+    border-radius: 15px;
+    display: inline-block;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Image Grid */
+.images {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    max-width: 80%;
+    margin: 40px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 900px) {
+    .images {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    .images {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.images a, .images h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    font-size: xx-large;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    border: 3px solid #ff4d6d;
+    text-decoration: none;
+}
+
+.picture1, .picture2, .picture3, .picture4, .picture5, .picture6, .picture7, .picture8, .picture9, .picture10, .picture11, .picture12, .picture13, .picture14 {
+    position: relative;
+}
+
+.picture1:hover::before {
+    content: 'My baby, is such a cutie just take a look at all the pictures here all of them are looking really cute. Glad I have those pictures. HeHe :D';
+}
+
+.picture2:hover::before {
+    content: "Such a pretty selfie of your's. Especially your hairs, just look at them (खुला कपाल)";
+}
+
+.picture3:hover::before {
+    content: 'OMGGGG such a filter queen (You look better without filter)';
+}
+
+.picture4:hover::before {
+    content: 'बाल्यकाल देखि लामो कपाल भयेकोकोमा मलाइ अत्यन्तै खुशी लागयो।';
+}
+
+.picture5:hover::before {
+    content: 'You are still a young baby, (You are still 5 year old)';
+}
+
+.picture6:hover::before {
+    content: "My favourite picture of you. Just look at the picture doesn't it look attractive?";
+}
+
+.picture7:hover::before {
+    content: 'Yooo, such a young and short baby. Somehow, you still have the same height?';
+}
+
+.picture8:hover::before {
+    content: "Such a pretty baby, who thinks she is cute but somehow actually looks gorgeous. I tried my best to insult this image but couldn't D:";
+}
+
+.picture9:hover::before {
+    content: 'Hehe, Was expecting a text here? No, Move forward :D';
+}
+
+.picture9:active::before {
+    content: 'You found it, another secret keep going :D';
+}
+
+.picture10:hover::before {
+    content: 'OMG NEPAL KO DONN (No comments)';
+}
+
+.picture11:hover::before {
+    content: 'Nothing, just someone siting in a *chair* and chilling with a pink hat.';
+}
+
+.picture12:hover::before {
+    content: "The first time joining LA, really nervous coming to school. Returning home was even scary, what if I don't drop at the correct spot?";
+}
+
+.picture13:hover::before {
+    content: 'OMG such a nigga.';
+}
+
+.picture14:hover::before {
+    content: 'According to Google, It is impossible for a human to have a black eye but somehow you proved it wrong? Nah, but how tf are your eyes so attractive? D:';
+}
+
+.picture1:hover::before, .picture2:hover::before, .picture3:hover::before, .picture4:hover::before, .picture5:hover::before, .picture6:hover::before, .picture7:hover::before, .picture8:hover::before, .picture9:hover::before, .picture9:active::before, .picture10:hover::before, .picture11:hover::before, .picture12:hover::before, .picture13:hover::before, .picture14:hover::before {
+    position: absolute;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    z-index: 10;
+    cursor: pointer;
+}
+
+/* Image Styling */
+.picture {
+    width: 100%;
+    max-height: 250px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 3px solid #ff4d6d;
+}
+
+/* Letter Button */
+.letter {
+    position: fixed;
+    left: 50%;
+    bottom: 30px;
+    transform: translateX(-50%);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.letter img {
+    width: 50px;
+    transition: 0.3s;
+}
+
+.letter img:hover {
+    transform: scale(1.1);
+}
+
+/* Valentine’s Day Card */
+.card {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    max-width: 700px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+    border: 2px solid #ff4d6d;
+    z-index: 10000;
+}
+
+.picture {
+    width: 100%;
+    max-height: 250px; /* Ensures all images have a uniform height */
+    aspect-ratio: 1/1;  /* Maintains square aspect ratio */
+    object-fit: cover;  /* Ensures the image covers the container */
+    border-radius: 10px;
+    border: 3px solid #ff4d6d;
+    display: block;  /* Ensures images behave as block-level elements */
+}
+
+/* Card Title */
+.card h1 {
+    color: #ff4d6d;
+    font-size: 32px;
+}
+
+/* Card Message */
+.card p {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+/* Card Close Button */
+.card button {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    color: #ff4d6d;
+}
+
+.song {
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    height: 40px;
+    width: 40px;
+}
+
+/* Secret Tab Styling */
+.secret {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ff4d6d;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+    z-index: 1000;
+}
+
