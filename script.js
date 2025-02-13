@@ -20,6 +20,7 @@ function toggleImage() {
         Value++;
         SecretCount.innerHTML = Value;
         secret1 = true;
+        AllSecret();
     }
 }
 
@@ -50,6 +51,7 @@ function DropImage(imageSrc, container = document.body) {
         Value++;
         SecretCount.innerHTML = Value;
         secret2 = true;
+        AllSecret();
     }
 }
 
@@ -58,6 +60,7 @@ function Secret3() {
         Value++;
         SecretCount.innerHTML = Value;
         secret3 = true;
+        AllSecret();
     }
 }
 
@@ -66,6 +69,7 @@ function Secret4() {
         Value++;
         SecretCount.innerHTML = Value;
         secret4 = true;
+        AllSecret();
     }
 }  
 
@@ -74,6 +78,7 @@ function Secret5() {
         Value++;
         SecretCount.innerHTML = Value;
         secret5 = true;
+        AllSecret();
     }
 }  
 
@@ -82,6 +87,15 @@ function Secret6() {
         Value++;
         SecretCount.innerHTML = Value;
         secret6 = true;
+        AllSecret();
+    }
+}
+
+function AllSecret() {
+    if (Value === 6) {
+        document.querySelector('.SecretFound').innerHTML = 'All secret found';
+        document.querySelector('.SecretFound').style = 'font-weight: bold; color: #000;'
+        document.querySelector('.SecretCount').style = 'display: none';
     }
 }
 
@@ -97,6 +111,4 @@ function getDaysDifference(date1, date2) {
 let today = new Date();
 let targetDate = '2025-02-14'; 
 
-document.querySelector('.DaysDifference').innerHTML = getDaysDifference(today, targetDate) - 1
-
-console.log(getDaysDifference(today, targetDate));
+document.querySelector('.DaysDifference').innerHTML = getDaysDifference(today, targetDate) - 1;
